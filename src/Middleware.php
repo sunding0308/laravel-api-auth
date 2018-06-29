@@ -35,6 +35,9 @@ class Middleware
             // 得到 api token
             $token = $request->hasHeader('api-token') ? $request->header('api-token') : $request->get('api-token');
 
+            // 检查是否存在token
+            $this->tokenExistCheck($token);
+
             // 得到 header 、 payload 、 signature 三段字符串
             list($header_string, $payload_string, $signature) = explode(".", $token);
 
@@ -49,6 +52,20 @@ class Middleware
         }
 
         return $next($request);
+    }
+
+    /**
+     * 检查是否存在token
+     *
+     * @param string  $token
+     *
+     * @throws InvalidTokenException
+     */
+    public function tokenExistCheck($token)
+    {
+        if (!$token) {
+            throw new InvalidTokenException('require token !');
+        }
     }
 
     /**
