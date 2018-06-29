@@ -12,19 +12,19 @@ composer require sunding0308/laravel-api-auth
 ## 配置
 1. 注册 `ServiceProvider`: 
     ```php
-    Qbhy\LaravelApiAuth\ServiceProvider::class,
+    SunD1ng\LaravelApiAuth\ServiceProvider::class,
     ```
     > laravel 5.5+ 版本不需要手动注册
 
 2. 发布配置文件
     ```php
-    php artisan vendor:publish --provider="Qbhy\LaravelApiAuth\ServiceProvider"
+    php artisan vendor:publish --provider="SunD1ng\LaravelApiAuth\ServiceProvider"
     ```
 
 3. 在 `App\Http\Kernal` 中注册中间件 
     ```php
     protected $routeMiddleware = [
-        'api_auth' => \Qbhy\LaravelApiAuth\Middleware::class,
+        'api_auth' => \SunD1ng\LaravelApiAuth\Middleware::class,
         // other ...
     ];
     ```
@@ -44,7 +44,7 @@ composer require sunding0308/laravel-api-auth
     ```
 
 5. 自定义签名方法 (可选)
-    `config/api_auth.php` 中的 `signature_methods` 可以添加自定义的签名类，该类需要继承自 `Qbhy\LaravelApiAuth\Signatures\SignatureInterface` 接口 
+    `config/api_auth.php` 中的 `signature_methods` 可以添加自定义的签名类，该类需要继承自 `SunD1ng\LaravelApiAuth\Signatures\SignatureInterface` 接口 
     ```php
    <?php
     /**
@@ -53,7 +53,7 @@ composer require sunding0308/laravel-api-auth
      * Time: 下午3:22
      */
     
-    namespace Qbhy\LaravelApiAuth\Signatures;
+    namespace SunD1ng\LaravelApiAuth\Signatures;
     
     
     class Md5 implements SignatureInterface

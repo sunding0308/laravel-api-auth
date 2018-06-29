@@ -1,11 +1,11 @@
 <?php
 /**
- * User: 96qbhy
+ * User: sunding0308
  * Date: 2018/4/16
  * Time: 下午3:22
  */
 
-namespace Qbhy\LaravelApiAuth\Signatures;
+namespace SunD1ng\LaravelApiAuth\Signatures;
 
 
 class Md5 implements SignatureInterface

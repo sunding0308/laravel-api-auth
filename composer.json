@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Qbhy\\LaravelApiAuth\\": "src"
+            "SunD1ng\\LaravelApiAuth\\": "src"
         },
         "files": [
             "src/fn.php"
@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Qbhy\\LaravelApiAuth\\ServiceProvider"
+                "SunD1ng\\LaravelApiAuth\\ServiceProvider"
             ]
         }
     }

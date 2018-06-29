@@ -1,6 +1,6 @@
 <?php
 
-namespace Qbhy\LaravelApiAuth;
+namespace SunD1ng\LaravelApiAuth;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;
